@@ -3,9 +3,9 @@ package be.tiemenv.projects.user;
 public class User {
 
     private String name;
-    private Integer projectCount;
+    private int projectCount;
 
-    public User(String name, Integer projectCount) {
+    public User(String name, int projectCount) {
         this.name = name;
         this.projectCount = projectCount;
     }
@@ -18,11 +18,11 @@ public class User {
         this.name = name;
     }
 
-    public Integer getProjectCount() {
+    public int getProjectCount() {
         return projectCount;
     }
 
-    public void setProjectCount(Integer projectCount) {
+    public void setProjectCount(int projectCount) {
         this.projectCount = projectCount;
     }
 

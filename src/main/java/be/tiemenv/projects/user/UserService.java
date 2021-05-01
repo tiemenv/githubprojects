@@ -17,10 +17,9 @@ public class UserService {
     }
 
     public User getUserProjects(String username) {
-//        throw new IllegalStateException("state exception");
 
             GithubUser githubUser = userRepository.getUserFromGithub(username);
-            return new User(githubUser.getLogin(), githubUser.getPublic_repos());
+            return new User(githubUser.getLogin(), githubUser.getPublicRepos());
 
     }
 

@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 
 //used to customize the way we throw the actual exception to the client
 

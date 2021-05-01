@@ -1,63 +1,84 @@
 package be.tiemenv.projects.github;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDateTime;
 
 public class GithubUser {
     private String login;
-    private Long id;
-    private String node_id;
-    private String avatar_url;
-    private String gravatar_url;
+    private long id;
+    @JsonProperty("node_id")
+    private String nodeId;
+    @JsonProperty("avatar_url")
+    private String avatarUrl;
+    @JsonProperty("gravatar_url")
+    private String gravatarUrl;
     private String url;
-    private String html_url;
-    private String followers_url;
-    private String following_url;
-    private String gists_url;
-    private String starred_url;
-    private String subscriptions_url;
-    private String organizations_url;
-    private String repos_url;
-    private String events_url;
-    private String received_events_url;
+    @JsonProperty("html_url")
+    private String htmlUrl;
+    @JsonProperty("followers_url")
+    private String followersUrl;
+    @JsonProperty("following_url")
+    private String followingUrl;
+    @JsonProperty("gists_url")
+    private String gistsUrl;
+    @JsonProperty("starred_url")
+    private String starredUrl;
+    @JsonProperty("subscriptions_url")
+    private String subscriptionsUrl;
+    @JsonProperty("organizations_url")
+    private String organizationsUrl;
+    @JsonProperty("repos_url")
+    private String reposUrl;
+    @JsonProperty("events_url")
+    private String eventsUrl;
+    @JsonProperty("received_events_url")
+    private String receivedEventsUrl;
     private String type;
-    private Boolean site_admin;
+    @JsonProperty("site_admin")
+    private boolean siteAdmin;
     private String name;
     private String company;
     private String blog;
     private String location;
     private String email;
-    private Boolean hireable;
+    private boolean hireable;
     private String bio;
-    private String twitter_username;
-    private Integer public_repos;
-    private Integer public_gists;
-    private Integer followers;
-    private Integer following;
-    private LocalDateTime created_at;
-    private LocalDateTime updated_at;
+    @JsonProperty("twitter_username")
+    private String twitterUsername;
+    @JsonProperty("public_repos")
+    private int publicRepos;
+    @JsonProperty("public_gists")
+    private int publicGists;
+    private int followers;
+    private int following;
+    @JsonProperty("created_at")
+    private LocalDateTime createdAt;
+    @JsonProperty("updated_at")
+    private LocalDateTime updatedAt;
 
     public GithubUser() {
     }
 
-    public GithubUser(String login, Long id, String node_id, String avatar_url, String gravatar_url, String url, String html_url, String followers_url, String following_url, String gists_url, String starred_url, String subscriptions_url, String organizations_url, String repos_url, String events_url, String received_events_url, String type, Boolean site_admin, String name, String company, String blog, String location, String email, Boolean hireable, String bio, String twitter_username, Integer public_repos, Integer public_gists, Integer followers, Integer following, LocalDateTime created_at, LocalDateTime updated_at) {
+    public GithubUser(String login, long id, String nodeId, String avatarUrl, String gravatarUrl, String url, String htmlUrl, String followersUrl, String followingUrl, String gistsUrl, String starredUrl, String subscriptionsUrl, String organizationsUrl, String reposUrl, String eventsUrl, String receivedEventsUrl, String type, boolean siteAdmin, String name, String company, String blog, String location, String email, boolean hireable, String bio, String twitterUsername, int publicRepos, int publicGists, int followers, int following, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.login = login;
         this.id = id;
-        this.node_id = node_id;
-        this.avatar_url = avatar_url;
-        this.gravatar_url = gravatar_url;
+        this.nodeId = nodeId;
+        this.avatarUrl = avatarUrl;
+        this.gravatarUrl = gravatarUrl;
         this.url = url;
-        this.html_url = html_url;
-        this.followers_url = followers_url;
-        this.following_url = following_url;
-        this.gists_url = gists_url;
-        this.starred_url = starred_url;
-        this.subscriptions_url = subscriptions_url;
-        this.organizations_url = organizations_url;
-        this.repos_url = repos_url;
-        this.events_url = events_url;
-        this.received_events_url = received_events_url;
+        this.htmlUrl = htmlUrl;
+        this.followersUrl = followersUrl;
+        this.followingUrl = followingUrl;
+        this.gistsUrl = gistsUrl;
+        this.starredUrl = starredUrl;
+        this.subscriptionsUrl = subscriptionsUrl;
+        this.organizationsUrl = organizationsUrl;
+        this.reposUrl = reposUrl;
+        this.eventsUrl = eventsUrl;
+        this.receivedEventsUrl = receivedEventsUrl;
         this.type = type;
-        this.site_admin = site_admin;
+        this.siteAdmin = siteAdmin;
         this.name = name;
         this.company = company;
         this.blog = blog;
@@ -65,13 +86,13 @@ public class GithubUser {
         this.email = email;
         this.hireable = hireable;
         this.bio = bio;
-        this.twitter_username = twitter_username;
-        this.public_repos = public_repos;
-        this.public_gists = public_gists;
+        this.twitterUsername = twitterUsername;
+        this.publicRepos = publicRepos;
+        this.publicGists = publicGists;
         this.followers = followers;
         this.following = following;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public String getLogin() {
@@ -82,36 +103,36 @@ public class GithubUser {
         this.login = login;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getNode_id() {
-        return node_id;
+    public String getNodeId() {
+        return nodeId;
     }
 
-    public void setNode_id(String node_id) {
-        this.node_id = node_id;
+    public void setNodeId(String nodeId) {
+        this.nodeId = nodeId;
     }
 
-    public String getAvatar_url() {
-        return avatar_url;
+    public String getAvatarUrl() {
+        return avatarUrl;
     }
 
-    public void setAvatar_url(String avatar_url) {
-        this.avatar_url = avatar_url;
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 
-    public String getGravatar_url() {
-        return gravatar_url;
+    public String getGravatarUrl() {
+        return gravatarUrl;
     }
 
-    public void setGravatar_url(String gravatar_url) {
-        this.gravatar_url = gravatar_url;
+    public void setGravatarUrl(String gravatarUrl) {
+        this.gravatarUrl = gravatarUrl;
     }
 
     public String getUrl() {
@@ -122,84 +143,84 @@ public class GithubUser {
         this.url = url;
     }
 
-    public String getHtml_url() {
-        return html_url;
+    public String getHtmlUrl() {
+        return htmlUrl;
     }
 
-    public void setHtml_url(String html_url) {
-        this.html_url = html_url;
+    public void setHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
     }
 
-    public String getFollowers_url() {
-        return followers_url;
+    public String getFollowersUrl() {
+        return followersUrl;
     }
 
-    public void setFollowers_url(String followers_url) {
-        this.followers_url = followers_url;
+    public void setFollowersUrl(String followersUrl) {
+        this.followersUrl = followersUrl;
     }
 
-    public String getFollowing_url() {
-        return following_url;
+    public String getFollowingUrl() {
+        return followingUrl;
     }
 
-    public void setFollowing_url(String following_url) {
-        this.following_url = following_url;
+    public void setFollowingUrl(String followingUrl) {
+        this.followingUrl = followingUrl;
     }
 
-    public String getGists_url() {
-        return gists_url;
+    public String getGistsUrl() {
+        return gistsUrl;
     }
 
-    public void setGists_url(String gists_url) {
-        this.gists_url = gists_url;
+    public void setGistsUrl(String gistsUrl) {
+        this.gistsUrl = gistsUrl;
     }
 
-    public String getStarred_url() {
-        return starred_url;
+    public String getStarredUrl() {
+        return starredUrl;
     }
 
-    public void setStarred_url(String starred_url) {
-        this.starred_url = starred_url;
+    public void setStarredUrl(String starredUrl) {
+        this.starredUrl = starredUrl;
     }
 
-    public String getSubscriptions_url() {
-        return subscriptions_url;
+    public String getSubscriptionsUrl() {
+        return subscriptionsUrl;
     }
 
-    public void setSubscriptions_url(String subscriptions_url) {
-        this.subscriptions_url = subscriptions_url;
+    public void setSubscriptionsUrl(String subscriptionsUrl) {
+        this.subscriptionsUrl = subscriptionsUrl;
     }
 
-    public String getOrganizations_url() {
-        return organizations_url;
+    public String getOrganizationsUrl() {
+        return organizationsUrl;
     }
 
-    public void setOrganizations_url(String organizations_url) {
-        this.organizations_url = organizations_url;
+    public void setOrganizationsUrl(String organizationsUrl) {
+        this.organizationsUrl = organizationsUrl;
     }
 
-    public String getRepos_url() {
-        return repos_url;
+    public String getReposUrl() {
+        return reposUrl;
     }
 
-    public void setRepos_url(String repos_url) {
-        this.repos_url = repos_url;
+    public void setReposUrl(String reposUrl) {
+        this.reposUrl = reposUrl;
     }
 
-    public String getEvents_url() {
-        return events_url;
+    public String getEventsUrl() {
+        return eventsUrl;
     }
 
-    public void setEvents_url(String events_url) {
-        this.events_url = events_url;
+    public void setEventsUrl(String eventsUrl) {
+        this.eventsUrl = eventsUrl;
     }
 
-    public String getReceived_events_url() {
-        return received_events_url;
+    public String getReceivedEventsUrl() {
+        return receivedEventsUrl;
     }
 
-    public void setReceived_events_url(String received_events_url) {
-        this.received_events_url = received_events_url;
+    public void setReceivedEventsUrl(String receivedEventsUrl) {
+        this.receivedEventsUrl = receivedEventsUrl;
     }
 
     public String getType() {
@@ -210,12 +231,12 @@ public class GithubUser {
         this.type = type;
     }
 
-    public Boolean getSite_admin() {
-        return site_admin;
+    public boolean isSiteAdmin() {
+        return siteAdmin;
     }
 
-    public void setSite_admin(Boolean site_admin) {
-        this.site_admin = site_admin;
+    public void setSiteAdmin(boolean siteAdmin) {
+        this.siteAdmin = siteAdmin;
     }
 
     public String getName() {
@@ -258,11 +279,11 @@ public class GithubUser {
         this.email = email;
     }
 
-    public Boolean getHireable() {
+    public boolean isHireable() {
         return hireable;
     }
 
-    public void setHireable(Boolean hireable) {
+    public void setHireable(boolean hireable) {
         this.hireable = hireable;
     }
 
@@ -274,59 +295,59 @@ public class GithubUser {
         this.bio = bio;
     }
 
-    public String getTwitter_username() {
-        return twitter_username;
+    public String getTwitterUsername() {
+        return twitterUsername;
     }
 
-    public void setTwitter_username(String twitter_username) {
-        this.twitter_username = twitter_username;
+    public void setTwitterUsername(String twitterUsername) {
+        this.twitterUsername = twitterUsername;
     }
 
-    public Integer getPublic_repos() {
-        return public_repos;
+    public int getPublicRepos() {
+        return publicRepos;
     }
 
-    public void setPublic_repos(Integer public_repos) {
-        this.public_repos = public_repos;
+    public void setPublicRepos(int publicRepos) {
+        this.publicRepos = publicRepos;
     }
 
-    public Integer getPublic_gists() {
-        return public_gists;
+    public int getPublicGists() {
+        return publicGists;
     }
 
-    public void setPublic_gists(Integer public_gists) {
-        this.public_gists = public_gists;
+    public void setPublicGists(int publicGists) {
+        this.publicGists = publicGists;
     }
 
-    public Integer getFollowers() {
+    public int getFollowers() {
         return followers;
     }
 
-    public void setFollowers(Integer followers) {
+    public void setFollowers(int followers) {
         this.followers = followers;
     }
 
-    public Integer getFollowing() {
+    public int getFollowing() {
         return following;
     }
 
-    public void setFollowing(Integer following) {
+    public void setFollowing(int following) {
         this.following = following;
     }
 
-    public LocalDateTime getCreated_at() {
-        return created_at;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(LocalDateTime created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdated_at() {
-        return updated_at;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

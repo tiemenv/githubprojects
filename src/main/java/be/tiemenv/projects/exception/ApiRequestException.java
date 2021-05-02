@@ -1,6 +1,6 @@
 package be.tiemenv.projects.exception;
 
-//our custom exception
+// custom exception
 public class ApiRequestException extends RuntimeException{
 
     public ApiRequestException(String message) {
@@ -10,6 +10,5 @@ public class ApiRequestException extends RuntimeException{
     public ApiRequestException(String message, Throwable cause) {
         super(message, cause);
     }
-
 
 }

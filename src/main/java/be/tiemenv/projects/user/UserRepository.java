@@ -2,7 +2,6 @@ package be.tiemenv.projects.user;
 
 import be.tiemenv.projects.exception.ApiRequestException;
 import be.tiemenv.projects.github.GithubUser;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.HttpClientErrorException;
@@ -12,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 public class UserRepository {
 
     @Autowired
-    public UserRepository(RestTemplate restTemplate, ObjectMapper objectMapper) {
+    public UserRepository(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 

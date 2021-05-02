@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.time.LocalTime;
 
-//used to customize the way we throw the actual exception to the client
+//used to customize the way we throw the exception to the client
 
 //tell spring this is our exception handler
 @ControllerAdvice
